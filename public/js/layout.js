@@ -23,7 +23,7 @@ function renderHeader() {
   el.innerHTML = `
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="index.html">priyanshu<span class="dot">.</span>rout</a>
+        <a class="brand" href="index.html">priyanshu<span class="accent">.</span>rout</a>
         <nav class="nav-links">${links}</nav>
       </div>
     </header>`;

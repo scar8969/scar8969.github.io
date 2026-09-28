@@ -17,35 +17,41 @@
     <section class="hero" style="padding:64px 0 48px;">
       <div class="container">
         <p class="hero-eyebrow">// projects</p>
-        <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Things I've built, measured, and shipped.</h1>
+        <h1 style="font-size:clamp(1.9rem,4vw,2.8rem);">Things I've built, <span class="underline">measured</span>, and shipped.</h1>
       </div>
     </section>
 
     <section class="section" style="padding-top:24px;">
       <div class="container">
         <div class="section-head">
-          <h2><span class="num">01</span>Robotics &amp; embedded</h2>
+          <h2><span class="num">01</span>Featured</h2>
         </div>
-        <div class="grid">
-          <a class="card" href="https://github.com/scar8969/Varuna" target="_blank" rel="noopener">
-            <div class="tag-row"><span class="tag">robotics</span><span class="tag">ROS</span></div>
+        <a class="featured" href="https://github.com/scar8969/Varuna" target="_blank" rel="noopener">
+          <div class="visual">
+            <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="60" y="70" width="200" height="70" rx="18" stroke="#1a1a1a" stroke-width="2.5"/>
+              <rect x="80" y="55" width="160" height="15" rx="7" stroke="#1a1a1a" stroke-width="2"/>
+              <rect x="80" y="140" width="160" height="15" rx="7" stroke="#1a1a1a" stroke-width="2"/>
+              <circle cx="60" cy="105" r="16" stroke="#e85d2a" stroke-width="2.5" fill="none"/>
+              <circle cx="260" cy="105" r="16" stroke="#e85d2a" stroke-width="2.5" fill="none"/>
+              <circle cx="60" cy="105" r="6" fill="#e85d2a"/>
+              <circle cx="260" cy="105" r="6" fill="#e85d2a"/>
+              <circle cx="160" cy="105" r="22" stroke="#1a1a1a" stroke-width="2.5"/>
+              <circle cx="160" cy="105" r="8" fill="#1a1a1a"/>
+              <path d="M160 105 L160 60 M160 105 L160 150" stroke="#1a1a1a" stroke-width="2"/>
+              <path d="M60 105 L160 105 M160 105 L260 105" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M20 190 L300 190" stroke="#d9d2c4" stroke-width="1.5"/>
+              <path d="M30 190 L30 175 M90 190 L90 175 M150 190 L150 175 M210 190 L210 175 M270 190 L270 175 M300 190 L300 175" stroke="#d9d2c4" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tag-row"><span class="tag">robotics</span><span class="tag">ROS</span><span class="tag">underwater</span></div>
             <h3>Varuna</h3>
             <p>Autonomous underwater robotic system using Raspberry Pi and Pixhawk BlueOS, with real-time video transmission over Ethernet.</p>
             <div class="meta">ROV · 2026</div>
-          </a>
-          <a class="card" href="https://github.com/scar8969/Heat-Dissipation-HYD" target="_blank" rel="noopener">
-            <div class="tag-row"><span class="tag">mechanical</span><span class="tag">analysis</span></div>
-            <h3>Heat Dissipation HYD</h3>
-            <p>Thermal analysis of heat dissipation in a hydraulic system — simulation and design work.</p>
-            <div class="meta">analysis · 2026</div>
-          </a>
-          <a class="card" href="https://github.com/scar8969/cloud-removal-from-sat-img" target="_blank" rel="noopener">
-            <div class="tag-row"><span class="tag">vision</span><span class="tag">satellite</span></div>
-            <h3>Cloud Removal from Satellite Images</h3>
-            <p>Computer vision pipeline to remove cloud cover from satellite imagery.</p>
-            <div class="meta">vision · 2026</div>
-          </a>
-        </div>
+            <span class="cta">view on github →</span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -57,19 +63,19 @@
         <div class="grid">
           <a class="card" href="https://github.com/scar8969/hft-engine-python" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">quant</span><span class="tag">python</span></div>
-            <h3>hft-engine-python</h3>
+            <h3>hft-engine-python<span class="arrow">→</span></h3>
             <p>Event-driven backtesting engine rebuilt from a C# original — market data → strategy → risk → order manager, with slippage and commission.</p>
             <div class="meta">backtesting · 2026</div>
           </a>
           <a class="card" href="https://github.com/scar8969/AgenticPay_mesh" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">agents</span><span class="tag">web3</span></div>
-            <h3>AgenticPay Mesh</h3>
+            <h3>AgenticPay Mesh<span class="arrow">→</span></h3>
             <p>Multi-agent orchestration where AI agents autonomously pay each other in USDC via Circle Nanopayments on Arc blockchain.</p>
             <div class="meta">agents · 2026</div>
           </a>
           <a class="card" href="https://github.com/scar8969/Retail-Sales-Analysis" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">data</span><span class="tag">analysis</span></div>
-            <h3>Retail Sales Analysis</h3>
+            <h3>Retail Sales Analysis<span class="arrow">→</span></h3>
             <p>Data analysis and visualization of retail sales data.</p>
             <div class="meta">data · 2026</div>
           </a>
@@ -80,54 +86,64 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2><span class="num">03</span>Web &amp; tools</h2>
+          <h2><span class="num">03</span>Robotics &amp; embedded</h2>
+        </div>
+        <div class="grid">
+          <a class="card" href="https://github.com/scar8969/Heat-Dissipation-HYD" target="_blank" rel="noopener">
+            <div class="tag-row"><span class="tag">mechanical</span><span class="tag">analysis</span></div>
+            <h3>Heat Dissipation HYD<span class="arrow">→</span></h3>
+            <p>Thermal analysis of heat dissipation in a hydraulic system — simulation and design work.</p>
+            <div class="meta">analysis · 2026</div>
+          </a>
+          <a class="card" href="https://github.com/scar8969/cloud-removal-from-sat-img" target="_blank" rel="noopener">
+            <div class="tag-row"><span class="tag">vision</span><span class="tag">satellite</span></div>
+            <h3>Cloud Removal from Satellite Images<span class="arrow">→</span></h3>
+            <p>Computer vision pipeline to remove cloud cover from satellite imagery.</p>
+            <div class="meta">vision · 2026</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><span class="num">04</span>Web &amp; tools</h2>
         </div>
         <div class="grid">
           <a class="card" href="https://github.com/scar8969/AuraKicks" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">web</span><span class="tag">ecommerce</span></div>
-            <h3>AuraKicks</h3>
+            <h3>AuraKicks<span class="arrow">→</span></h3>
             <p>Sneaker marketplace with a gothic blackletter identity — full-stack storefront built around a scraped product catalog.</p>
             <div class="meta">web · 2026</div>
           </a>
           <a class="card" href="https://github.com/scar8969/repo2demo" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">tools</span><span class="tag">ai</span></div>
-            <h3>repo2demo</h3>
+            <h3>repo2demo<span class="arrow">→</span></h3>
             <p>An agent that turns any GitHub repo into an interactive demo — FastAPI backend, vanilla JS frontend.</p>
             <div class="meta">tools · 2026</div>
           </a>
           <a class="card" href="https://github.com/scar8969/Manuscript_AI" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">ai</span><span class="tag">resume</span></div>
-            <h3>Manuscript AI</h3>
+            <h3>Manuscript AI<span class="arrow">→</span></h3>
             <p>Browser-based LaTeX resume editor with a job scraper and LLM chatbot to tailor resumes to job postings.</p>
             <div class="meta">ai · 2026</div>
           </a>
           <a class="card" href="https://github.com/scar8969/KrishiCred" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">climate</span><span class="tag">fintech</span></div>
-            <h3>KrishiCred</h3>
+            <h3>KrishiCred<span class="arrow">→</span></h3>
             <p>Climate finance infrastructure for Indian agriculture — satellite-backed carbon credits and marketplace routing.</p>
             <div class="meta">fintech · 2026</div>
           </a>
-          <a class="card" href="https://github.com/scar8969/pynora" target="_blank" rel="noopener">
-            <div class="tag-row"><span class="tag">python</span><span class="tag">tools</span></div>
-            <h3>pynora</h3>
-            <p>Python library / tooling project.</p>
-            <div class="meta">tools · 2026</div>
-          </a>
-          <a class="card" href="https://github.com/scar8969/dalali" target="_blank" rel="noopener">
-            <div class="tag-row"><span class="tag">web</span></div>
-            <h3>Dalali</h3>
-            <p>Web project.</p>
-            <div class="meta">web · 2026</div>
-          </a>
           <a class="card" href="https://github.com/scar8969/cpu-guard" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">python</span><span class="tag">devops</span></div>
-            <h3>cpu-guard</h3>
+            <h3>cpu-guard<span class="arrow">→</span></h3>
             <p>Resource management middleware for Python web apps — CPU/memory limiting, throttling, rate limiting, and Prometheus metrics.</p>
             <div class="meta">devops · 2026</div>
           </a>
           <a class="card" href="https://github.com/scar8969/chip_8" target="_blank" rel="noopener">
             <div class="tag-row"><span class="tag">c++</span><span class="tag">emulator</span></div>
-            <h3>chip_8</h3>
+            <h3>chip_8<span class="arrow">→</span></h3>
             <p>C++ CHIP-8 emulator.</p>
             <div class="meta">emulator · 2026</div>
           </a>

@@ -1,11 +1,12 @@
-# Priyanshu Rout — Personal Site
+# scar8969.github.io — Priyanshu Rout
 
-A static, framework-free personal portfolio and engineering site. Robotics,
-embedded systems, quant trading, and open tools.
+Personal portfolio & engineering site for Priyanshu Rout — robotics, embedded
+systems, quant trading, and open tools.
 
 ## Run locally
 
 ```bash
+cd public
 python -m http.server 8080
 ```
 
@@ -15,18 +16,19 @@ then open http://localhost:8080
 
 ```
 public/
-  index.html          homepage (hero + selected work)
+  index.html          homepage (terminal hero + featured work)
   projects.html       full project index
-  tools.html          interactive tools (gear solver)
+  tools.html          interactive harmonic drive calculator
   about.html          about + contact
-  css/style.css       design system
-  js/                 vanilla JS (no framework)
+  css/style.css       design system (editorial engineering theme)
+  js/layout.js        shared header/footer
+  js/harmonic.js      clean-room harmonic drive solver
 ```
 
 ## Stack
 
 - Plain HTML + CSS + vanilla JS — no build step, no framework
-- Serves as static files from any host (GitHub Pages, Netlify, Vercel, Railway)
+- Deploys to GitHub Pages at scar8969.github.io
 
 ## License
 

@@ -15,28 +15,35 @@
 
   <main>
     <section class="hero">
-      <div class="container">
-        <p class="hero-eyebrow">// robotics · embedded · quant</p>
-        <h1>I build machines that <span class="grad">move</span>, and code that <span class="grad">thinks</span>.</h1>
-        <p class="hero-sub">
-          Priyanshu Rout — robotics engineer and developer. From autonomous
-          underwater vehicles to event-driven trading engines, I design systems
-          that are built, measured, and understood.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="projects.html">see my work →</a>
-          <a class="btn btn-ghost" href="about.html">about me</a>
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-eyebrow">// robotics · embedded · quant</p>
+          <h1>I build machines that <span class="underline">move</span> and code that <span class="underline">thinks</span>.</h1>
+          <p class="hero-sub">
+            Priyanshu Rout — robotics engineer and developer. From autonomous
+            underwater vehicles to event-driven trading engines, I design
+            systems that are built, measured, and understood.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="projects.html">see my work →</a>
+            <a class="btn btn-ghost" href="about.html">about me</a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="stats">
-          <div class="stat"><div class="v">10<small>+</small></div><div class="k">public projects</div></div>
-          <div class="stat"><div class="v">4<small></small></div><div class="k">robotics systems built</div></div>
-          <div class="stat"><div class="v">3<small></small></div><div class="k">trading engines</div></div>
-          <div class="stat"><div class="v">∞<small></small></div><div class="k">curiosity</div></div>
+        <div class="terminal" aria-hidden="true">
+          <div class="bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="title">priyanshu@dev: ~/systems</span>
+          </div>
+          <div class="body"><span class="p">$</span> whoami
+<span class="g">robotics engineer · embedded dev · quant trader</span>
+<span class="p">$</span> cat current_focus.txt
+<span class="c">autonomous underwater robotics</span>
+<span class="c">event-driven backtesting engines</span>
+<span class="c">open tools for engineers</span>
+<span class="p">$</span> ls projects/
+<span class="b">Varuna/  hft-engine/  AuraKicks/  repo2demo/</span>
+<span class="p">$</span> status --live
+<span class="g">● building · measuring · shipping</span><span class="cursor"></span></div>
         </div>
       </div>
     </section>
@@ -44,32 +51,73 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2><span class="num">01</span>Selected work</h2>
+          <h2><span class="num">01</span>Featured project</h2>
+        </div>
+        <a class="featured" href="https://github.com/scar8969/Varuna" target="_blank" rel="noopener">
+          <div class="visual">
+            <!-- ROV schematic line art -->
+            <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="60" y="70" width="200" height="70" rx="18" stroke="#1a1a1a" stroke-width="2.5"/>
+              <rect x="80" y="55" width="160" height="15" rx="7" stroke="#1a1a1a" stroke-width="2"/>
+              <rect x="80" y="140" width="160" height="15" rx="7" stroke="#1a1a1a" stroke-width="2"/>
+              <circle cx="60" cy="105" r="16" stroke="#e85d2a" stroke-width="2.5" fill="none"/>
+              <circle cx="260" cy="105" r="16" stroke="#e85d2a" stroke-width="2.5" fill="none"/>
+              <circle cx="60" cy="105" r="6" fill="#e85d2a"/>
+              <circle cx="260" cy="105" r="6" fill="#e85d2a"/>
+              <circle cx="160" cy="105" r="22" stroke="#1a1a1a" stroke-width="2.5"/>
+              <circle cx="160" cy="105" r="8" fill="#1a1a1a"/>
+              <path d="M160 105 L160 60 M160 105 L160 150" stroke="#1a1a1a" stroke-width="2"/>
+              <path d="M60 105 L160 105 M160 105 L260 105" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M20 190 L300 190" stroke="#d9d2c4" stroke-width="1.5"/>
+              <path d="M30 190 L30 175 M90 190 L90 175 M150 190 L150 175 M210 190 L210 175 M270 190 L270 175 M300 190 L300 175" stroke="#d9d2c4" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tag-row"><span class="tag">robotics</span><span class="tag">ROS</span><span class="tag">embedded</span></div>
+            <h3>Varuna — Autonomous Underwater Vehicle</h3>
+            <p>
+              An autonomous ROV built on Raspberry Pi and Pixhawk BlueOS, with
+              real-time video transmission over Ethernet. Full control stack,
+              sensor integration, and underwater navigation.
+            </p>
+            <div class="meta">ROV · 2026</div>
+            <span class="cta">view on github →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><span class="num">02</span>Selected work</h2>
           <a class="link" href="projects.html">all projects →</a>
         </div>
-        <div class="grid" id="featured-projects"></div>
+        <div class="grid" id="project-grid"></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2><span class="num">02</span>What I do</h2>
+          <h2><span class="num">03</span>What I do</h2>
         </div>
-        <div class="prose">
-          <p>
-            I work across the full stack of a physical system — from the
-            <strong>embedded firmware</strong> that talks to sensors, to the
-            <strong>algorithms</strong> that make decisions, to the
-            <strong>dashboards</strong> that make it observable.
-          </p>
-          <p>
-            Recent focus: <strong>autonomous underwater robotics</strong> (ROV
-            control, real-time video over Ethernet), <strong>event-driven
-            backtesting</strong> for algorithmic trading, and
-            <strong>open tools</strong> that make hard engineering problems
-            approachable.
-          </p>
+        <div class="triad">
+          <div class="triad-item">
+            <div class="n">/firmware</div>
+            <h3>Embedded systems</h3>
+            <p>Firmware that talks to sensors and actuators — from motor control to real-time telemetry on constrained hardware.</p>
+          </div>
+          <div class="triad-item">
+            <div class="n">/algorithms</div>
+            <h3>Decision systems</h3>
+            <p>Event-driven architectures and control logic — backtesting engines, trading strategies, and robot navigation.</p>
+          </div>
+          <div class="triad-item">
+            <div class="n">/observability</div>
+            <h3>Dashboards &amp; tools</h3>
+            <p>Making systems observable — dashboards that tell the truth, and open tools that make hard problems approachable.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -79,36 +127,30 @@
 
   <script src="js/layout.js"></script>
   <script>
-    const FEATURED = [
-      {
-        title: "Varuna",
-        desc: "Autonomous underwater robotic system using Raspberry Pi and Pixhawk BlueOS, with real-time video transmission over Ethernet.",
-        tags: ["robotics", "ROS", "embedded"],
-        meta: "ROV · 2026"
-      },
+    const PROJECTS = [
       {
         title: "hft-engine-python",
-        desc: "Event-driven backtesting engine rebuilt from a C# original — market data, strategy, risk, and order manager with slippage and commission.",
         tags: ["quant", "python", "backtesting"],
+        desc: "Event-driven backtesting engine rebuilt from a C# original — market data, strategy, risk, and order manager with slippage and commission.",
         meta: "trading · 2026"
       },
       {
         title: "AuraKicks",
-        desc: "A sneaker marketplace with a gothic blackletter identity — full-stack storefront built around a scraped product catalog.",
         tags: ["web", "full-stack", "ecommerce"],
+        desc: "Sneaker marketplace with a gothic blackletter identity — full-stack storefront built around a scraped product catalog.",
         meta: "web · 2026"
       },
       {
         title: "repo2demo",
-        desc: "An agent that turns any GitHub repo into an interactive demo — FastAPI backend with a vanilla JS frontend.",
         tags: ["tools", "ai", "fastapi"],
+        desc: "An agent that turns any GitHub repo into an interactive demo — FastAPI backend with a vanilla JS frontend.",
         meta: "tools · 2026"
       }
     ];
-    document.getElementById("featured-projects").innerHTML = FEATURED.map(p => `
-      <a class="card" href="projects.html">
+    document.getElementById("project-grid").innerHTML = PROJECTS.map(p => `
+      <a class="card" href="https://github.com/scar8969/${p.title}" target="_blank" rel="noopener">
         <div class="tag-row">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-        <h3>${p.title}</h3>
+        <h3>${p.title}<span class="arrow">→</span></h3>
         <p>${p.desc}</p>
         <div class="meta">${p.meta}</div>
       </a>

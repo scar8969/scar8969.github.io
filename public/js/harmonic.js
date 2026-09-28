@@ -114,7 +114,7 @@ const Harmonic = (() => {
     // circular spline (rigid, round)
     ctx.beginPath();
     ctx.arc(cx, cy, (r.outerDia / 2 - r.wall) * scale, 0, 2 * Math.PI);
-    ctx.strokeStyle = "#38bdf8";
+    ctx.strokeStyle = "#c94a1e";
     ctx.lineWidth = 2;
     ctx.stroke();
 
@@ -130,7 +130,7 @@ const Harmonic = (() => {
       else ctx.lineTo(x, y);
     }
     ctx.closePath();
-    ctx.strokeStyle = "#4ade80";
+    ctx.strokeStyle = "#1a7f4b";
     ctx.lineWidth = 2;
     ctx.stroke();
 
@@ -138,7 +138,7 @@ const Harmonic = (() => {
     ctx.beginPath();
     ctx.arc(cx, cy, r.rm * scale, 0, 2 * Math.PI);
     ctx.setLineDash([4, 4]);
-    ctx.strokeStyle = "rgba(143,163,189,0.4)";
+    ctx.strokeStyle = "rgba(138,133,120,0.5)";
     ctx.lineWidth = 1;
     ctx.stroke();
     ctx.setLineDash([]);
@@ -147,7 +147,7 @@ const Harmonic = (() => {
     ctx.beginPath();
     ctx.moveTo(cx - r.a * scale, cy);
     ctx.lineTo(cx + r.a * scale, cy);
-    ctx.strokeStyle = "rgba(251,191,36,0.6)";
+    ctx.strokeStyle = "rgba(26,26,26,0.35)";
     ctx.lineWidth = 1;
     ctx.stroke();
   }
