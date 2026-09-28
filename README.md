@@ -6,7 +6,6 @@ systems, quant trading, and open tools.
 ## Run locally
 
 ```bash
-cd public
 python -m http.server 8080
 ```
 
@@ -15,14 +14,13 @@ then open http://localhost:8080
 ## Structure
 
 ```
-public/
-  index.html          homepage (terminal hero + featured work)
-  projects.html       full project index
-  tools.html          interactive harmonic drive calculator
-  about.html          about + contact
-  css/style.css       design system (editorial engineering theme)
-  js/layout.js        shared header/footer
-  js/harmonic.js      clean-room harmonic drive solver
+index.html          homepage (terminal hero + featured work)
+projects.html       full project index
+tools.html          interactive harmonic drive calculator
+about.html          about + contact
+css/style.css       design system (editorial engineering theme)
+js/layout.js        shared header/footer
+js/harmonic.js      clean-room harmonic drive solver
 ```
 
 ## Stack
