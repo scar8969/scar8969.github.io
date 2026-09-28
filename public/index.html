@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanshu Rout — Robotics, Embedded &amp; Quant Engineering</title>
+  <meta name="description" content="Priyanshu Rout — robotics engineer, embedded systems developer, and quant trader. Building autonomous systems, trading engines, and open tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="hero-eyebrow">// robotics · embedded · quant</p>
+        <h1>I build machines that <span class="grad">move</span>, and code that <span class="grad">thinks</span>.</h1>
+        <p class="hero-sub">
+          Priyanshu Rout — robotics engineer and developer. From autonomous
+          underwater vehicles to event-driven trading engines, I design systems
+          that are built, measured, and understood.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="projects.html">see my work →</a>
+          <a class="btn btn-ghost" href="about.html">about me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><div class="v">10<small>+</small></div><div class="k">public projects</div></div>
+          <div class="stat"><div class="v">4<small></small></div><div class="k">robotics systems built</div></div>
+          <div class="stat"><div class="v">3<small></small></div><div class="k">trading engines</div></div>
+          <div class="stat"><div class="v">∞<small></small></div><div class="k">curiosity</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><span class="num">01</span>Selected work</h2>
+          <a class="link" href="projects.html">all projects →</a>
+        </div>
+        <div class="grid" id="featured-projects"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><span class="num">02</span>What I do</h2>
+        </div>
+        <div class="prose">
+          <p>
+            I work across the full stack of a physical system — from the
+            <strong>embedded firmware</strong> that talks to sensors, to the
+            <strong>algorithms</strong> that make decisions, to the
+            <strong>dashboards</strong> that make it observable.
+          </p>
+          <p>
+            Recent focus: <strong>autonomous underwater robotics</strong> (ROV
+            control, real-time video over Ethernet), <strong>event-driven
+            backtesting</strong> for algorithmic trading, and
+            <strong>open tools</strong> that make hard engineering problems
+            approachable.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/layout.js"></script>
+  <script>
+    const FEATURED = [
+      {
+        title: "Varuna",
+        desc: "Autonomous underwater robotic system using Raspberry Pi and Pixhawk BlueOS, with real-time video transmission over Ethernet.",
+        tags: ["robotics", "ROS", "embedded"],
+        meta: "ROV · 2026"
+      },
+      {
+        title: "hft-engine-python",
+        desc: "Event-driven backtesting engine rebuilt from a C# original — market data, strategy, risk, and order manager with slippage and commission.",
+        tags: ["quant", "python", "backtesting"],
+        meta: "trading · 2026"
+      },
+      {
+        title: "AuraKicks",
+        desc: "A sneaker marketplace with a gothic blackletter identity — full-stack storefront built around a scraped product catalog.",
+        tags: ["web", "full-stack", "ecommerce"],
+        meta: "web · 2026"
+      },
+      {
+        title: "repo2demo",
+        desc: "An agent that turns any GitHub repo into an interactive demo — FastAPI backend with a vanilla JS frontend.",
+        tags: ["tools", "ai", "fastapi"],
+        meta: "tools · 2026"
+      }
+    ];
+    document.getElementById("featured-projects").innerHTML = FEATURED.map(p => `
+      <a class="card" href="projects.html">
+        <div class="tag-row">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <div class="meta">${p.meta}</div>
+      </a>
+    `).join("");
+  </script>
+</body>
+</html>

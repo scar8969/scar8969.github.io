@@ -1,0 +1,14 @@
+{
+  "name": "priyanshu-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio & engineering site for Priyanshu Rout — robotics, embedded systems, quant trading, and open tools.",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "build": "echo 'static site, nothing to build'",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": ["portfolio", "robotics", "embedded", "quant", "engineering"],
+  "author": "Priyanshu Rout",
+  "license": "MIT"
+}

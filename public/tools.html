@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools — Priyanshu Rout</title>
+  <meta name="description" content="Interactive tools by Priyanshu Rout — a harmonic drive calculator built from first principles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero" style="padding:64px 0 48px;">
+      <div class="container">
+        <p class="hero-eyebrow">// tools</p>
+        <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Harmonic drive calculator</h1>
+        <p class="hero-sub">
+          A strain-wave gearbox design tool built from first principles. Enter
+          tooth counts and module, and it computes the geometry, reduction,
+          deflection, and mesh characteristics.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+
+          <!-- inputs -->
+          <div class="card" style="gap:16px;">
+            <h3>Parameters</h3>
+            <div style="display:grid;gap:12px;">
+              <label class="mono" style="font-size:0.8rem;color:var(--fg-muted);">
+                Module m (mm)
+                <input type="number" id="module" value="1.25" step="0.05" min="0.1"
+                       style="width:100%;margin-top:4px;padding:8px 10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--fg);font-family:var(--font-mono);">
+              </label>
+              <label class="mono" style="font-size:0.8rem;color:var(--fg-muted);">
+                Flexspline teeth (Zf)
+                <input type="number" id="zf" value="100" step="2" min="20"
+                       style="width:100%;margin-top:4px;padding:8px 10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--fg);font-family:var(--font-mono);">
+              </label>
+              <label class="mono" style="font-size:0.8rem;color:var(--fg-muted);">
+                Circular spline teeth (Zc)
+                <input type="number" id="zc" value="102" step="2" min="22"
+                       style="width:100%;margin-top:4px;padding:8px 10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--fg);font-family:var(--font-mono);">
+              </label>
+              <label class="mono" style="font-size:0.8rem;color:var(--fg-muted);">
+                Deflection ratio (w0/m)
+                <input type="number" id="w0ratio" value="1.0" step="0.05" min="0.5" max="2.5"
+                       style="width:100%;margin-top:4px;padding:8px 10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--fg);font-family:var(--font-mono);">
+              </label>
+              <label class="mono" style="font-size:0.8rem;color:var(--fg-muted);">
+                Flexspline wall (mm)
+                <input type="number" id="wall" value="0.75" step="0.05" min="0.4"
+                       style="width:100%;margin-top:4px;padding:8px 10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--fg);font-family:var(--font-mono);">
+              </label>
+            </div>
+            <p class="muted" style="font-size:0.8rem;" id="warn"></p>
+          </div>
+
+          <!-- output -->
+          <div class="card" style="gap:16px;">
+            <h3>Results</h3>
+            <div id="results" style="display:grid;gap:8px;font-family:var(--font-mono);font-size:0.9rem;">
+              <div>reduction: <span class="accent" id="r-ratio">—</span></div>
+              <div>pitch dia: <span class="accent2" id="r-pitch">—</span></div>
+              <div>outer dia: <span class="accent2" id="r-outer">—</span></div>
+              <div>radial deflection: <span id="r-w0">—</span></div>
+              <div>teeth in mesh: <span id="r-mesh">—</span></div>
+              <div>peak strain: <span id="r-strain">—</span></div>
+            </div>
+            <canvas id="gear-canvas" width="360" height="360"
+                    style="width:100%;max-width:360px;margin:0 auto;display:block;background:var(--bg);border:1px solid var(--line);border-radius:8px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/layout.js"></script>
+  <script src="js/harmonic.js"></script>
+  <script>
+    // wire inputs -> solver
+    const ids = ["module", "zf", "zc", "w0ratio", "wall"];
+    const warn = document.getElementById("warn");
+    function update() {
+      const p = {
+        module: parseFloat(document.getElementById("module").value),
+        zf: parseInt(document.getElementById("zf").value),
+        zc: parseInt(document.getElementById("zc").value),
+        w0ratio: parseFloat(document.getElementById("w0ratio").value),
+        wall: parseFloat(document.getElementById("wall").value)
+      };
+      warn.textContent = "";
+      try {
+        const r = Harmonic.solve(p);
+        document.getElementById("r-ratio").textContent = r.ratio + " : 1";
+        document.getElementById("r-pitch").textContent = r.pitchDia.toFixed(1) + " mm";
+        document.getElementById("r-outer").textContent = r.outerDia.toFixed(1) + " mm";
+        document.getElementById("r-w0").textContent = r.w0.toFixed(3) + " mm (" + r.deflPct.toFixed(1) + "%)";
+        document.getElementById("r-mesh").textContent = "≈ " + r.teethMesh + " (" + r.teethPct.toFixed(0) + "%)";
+        document.getElementById("r-strain").textContent = r.strainPct.toFixed(2) + "%";
+        Harmonic.draw("gear-canvas", r);
+      } catch (e) {
+        warn.textContent = e.message;
+      }
+    }
+    ids.forEach(id => document.getElementById(id).addEventListener("input", update));
+    update();
+  </script>
+</body>
+</html>
